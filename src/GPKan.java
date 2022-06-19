@@ -1,5 +1,7 @@
 
+import controller.SelectMenu;
 import gpkan.view.Menu;
+import java.util.Scanner;
 
 
 
@@ -18,7 +20,14 @@ public class GPKan {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        byte numero = 10;
+        
         Menu.criarMenu();
+        
+       numero = entrada.nextByte();
+       
+        SelectMenu.escolher(numero);
     }
     
 }
